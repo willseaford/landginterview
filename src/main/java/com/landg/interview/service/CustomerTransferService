@@ -1,0 +1,22 @@
+package com.landg.interview.service;
+
+import com.landg.interview.dto.Customer;
+import com.landg.interview.mapper.CustomerMapperBasic;
+
+public class CustomerTransferService {
+
+    private CustomerMapperBasic CustomerMapperBasic;
+    private CustomerMapperBuilder customerMapperBuilder;
+
+    public CustomerInfo transferCustomerBasic(Customer customer) {
+        CustomerInfo customerInfo = customerMapperBasic.mapToCustomerInfo(customer);
+    }
+
+    public CustomerInfo transferCustomerBuilder(Customer customer) {
+        CustomerInfo customerInfo = customerMapperBuilder.mapToCustomerInfo(customer);
+    }
+
+
+
+
+}
